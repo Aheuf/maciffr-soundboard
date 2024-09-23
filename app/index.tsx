@@ -1,4 +1,7 @@
-import { Text, View } from "react-native";
+import { View } from "react-native";
+import sounds from "../resources/sounds.json";
+import { SoundButton } from "@/components/SoundButton";
+import { ThemeEnum } from "@/constants/Enums";
 
 export default function Index() {
   return (
@@ -9,7 +12,7 @@ export default function Index() {
         alignItems: "center",
       }}
     >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+      {sounds.map((sound, index) => <SoundButton appIsPlaying={false} play={() => {}} theme={ThemeEnum.DARK} titre="" key={`${sound.nom}-${index}`}/>)}
     </View>
   );
 }
