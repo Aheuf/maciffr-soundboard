@@ -3,9 +3,8 @@ import "../SoundButton/SoundButton.css"
 type soundButtonProps = {
     titre:string
     theme: ThemeEnum
-    appIsPlaying: boolean
-    play: (titre:string) => void
     img?:string
+    sound:string
 }
 
 const SIZE = "5rem"
@@ -21,7 +20,12 @@ const style = {
     width:SIZE
 }
 
-export const SoundButton = ({titre, theme, appIsPlaying, play, img}:soundButtonProps) => 
-    <button id={titre} onClick={() => play(titre)} style={style} className={theme} disabled={appIsPlaying}>
-        {img ? <img src={`../${img}`} alt={titre} height={"60rem"}/>: titre}
-    </button>
+export const SoundButton = ({titre, theme, img, sound}:soundButtonProps) => {
+    function handleClick() {
+        //play sound
+    }
+    return (
+        <button id={titre} onClick={() => handleClick()} style={style} className={theme}>
+            {img ? <img src={`../${img}`} alt={titre} height={"60rem"}/>: titre}
+        </button>
+)}
