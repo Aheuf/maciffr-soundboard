@@ -9,6 +9,7 @@ type soundButtonProps = {
 }
 
 const style = {
+    margin: "0.3rem",
     border: "2px solid",
     backgroundColor:"#00000000",
     borderRadius: "1rem",
