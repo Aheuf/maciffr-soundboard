@@ -1,7 +1,8 @@
 [
     {
         "nom":"huh",
-        "son":"huhSound.mp3"
+        "son":"huhSound.mp3",
+        "img":"assets/images/huh.png"
     },
     {
         "nom":"huh",

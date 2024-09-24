@@ -13,7 +13,12 @@ export default function Index() {
         "justifyContent":"center",
         "padding":"auto"
       }}>
-        {sounds.map((sound, index) => <SoundButton appIsPlaying={false} play={() => {}} theme={ThemeEnum.DARK} titre={sound.nom} key={`${sound.nom}-${index}`}/>)}
+        {sounds.map((sound, index) => <SoundButton  appIsPlaying={false}
+                                                    play={() => {}}
+                                                    theme={ThemeEnum.DARK}
+                                                    titre={sound.nom}
+                                                    key={`${sound.nom}-${index}`}
+                                                    img={sound?.img}/>)}
       </View>
     </ScrollView>
   );
