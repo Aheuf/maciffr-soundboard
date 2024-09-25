@@ -13,8 +13,7 @@ export default function Index() {
         "justifyContent":"center",
         "padding":"auto"
       }}>
-        {sounds.map((sound, index) => <SoundButton  sound={sound.son}
-                                                    theme={ThemeEnum.DARK}
+        {sounds.map((sound, index) => <SoundButton  theme={ThemeEnum.DARK}
                                                     titre={sound.nom}
                                                     key={`${sound.nom}-${index}`}
                                                     img={sound?.img}/>)}

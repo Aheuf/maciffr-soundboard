@@ -4,7 +4,6 @@ type soundButtonProps = {
     titre:string
     theme: ThemeEnum
     img?:string
-    sound:string
 }
 
 const SIZE = "5rem"
@@ -20,9 +19,9 @@ const style = {
     width:SIZE
 }
 
-export const SoundButton = ({titre, theme, img, sound}:soundButtonProps) => {
+export const SoundButton = ({titre, theme, img }:soundButtonProps) => {
     function handleClick() {
-        //play sound
+        new Audio(`../assets/sounds/${titre}.mp3`).play()
     }
     return (
         <button id={titre} onClick={() => handleClick()} style={style} className={theme}>
