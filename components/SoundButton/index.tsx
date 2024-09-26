@@ -1,9 +1,10 @@
-import { ThemeEnum } from "@/constants/Enums"
+import { Format, ThemeEnum } from "@/constants/Enums"
 import "../SoundButton/SoundButton.css"
+import { PATH } from "@/constants/constants"
+
 type soundButtonProps = {
     titre:string
     theme: ThemeEnum
-    img?:string
 }
 
 const SIZE = "5rem"
@@ -19,12 +20,12 @@ const style = {
     width:SIZE
 }
 
-export const SoundButton = ({titre, theme, img }:soundButtonProps) => {
+export const SoundButton = ({titre, theme }:soundButtonProps) => {
     function handleClick() {
-        new Audio(`../assets/sounds/${titre}.mp3`).play()
+        new Audio(`${PATH.ASSET_SOUND}${titre}${Format.MP3}`).play()
     }
     return (
         <button id={titre} onClick={() => handleClick()} style={style} className={theme}>
-            {img ? <img src={`../${img}`} alt={titre} height={"60rem"}/>: titre}
+            <img src={`${PATH.ASSET_IMG}${titre}${Format.PNG}`} alt={titre} height={"60rem"}/>
         </button>
 )}
