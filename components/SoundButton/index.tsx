@@ -1,31 +1,41 @@
-import { Format, ThemeEnum } from "@/constants/Enums"
-import "../SoundButton/SoundButton.css"
+import { Format } from "@/constants/Enums"
 import { PATH } from "@/constants/constants"
+import { Image } from 'expo-image';
+import { TouchableOpacity, StyleSheet } from "react-native"
 
 type soundButtonProps = {
     titre:string
-    theme: ThemeEnum
 }
 
-const SIZE = "5rem"
+const SIZE = 60
 
-const style = {
-    margin: "0.3rem",
-    border: "2px solid",
-    backgroundColor:"#00000000",
-    borderRadius: "1rem",
-    transition: "all ease 0.1s",
-    boxShadow: "0px 5px 0px 0px #a29bfe",
-    height:SIZE,
-    width:SIZE
-}
+export const SoundButton = ({titre }:soundButtonProps) => {
 
-export const SoundButton = ({titre, theme }:soundButtonProps) => {
     function handleClick() {
-        new Audio(`${PATH.ASSET_SOUND}${titre}${Format.MP3}`).play()
+        new Audio(`${PATH.ASSET_SOUND}${titre}${Format.MP3}`).play();
     }
+
     return (
-        <button id={titre} onClick={() => handleClick()} style={style} className={theme}>
-            <img src={`${PATH.ASSET_IMG}${titre}${Format.PNG}`} alt={titre} height={"60rem"}/>
-        </button>
-)}
+        <TouchableOpacity onPress={handleClick} style={style.button}>
+            <Image source={`${PATH.ASSET_IMG}${titre}${Format.PNG}`} alt={titre} style={style.img}/>
+        </TouchableOpacity>
+)};
+
+const style = StyleSheet.create({
+    button: {        
+        margin: 5,
+        borderWidth: 2,
+        backgroundColor:"#00000000",
+        borderRadius: 5,
+        shadowColor:"#a29bfe",
+        height:SIZE,
+        width:SIZE,
+    
+    },
+    img: {
+        alignSelf:"center",
+        marginVertical:"auto",
+        height:SIZE-10,
+        width:SIZE-10
+    }
+})

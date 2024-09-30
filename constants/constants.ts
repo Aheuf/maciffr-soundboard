@@ -2,5 +2,5 @@ export const sounds: string[] = ["huh","dlaMerde","aaaahhhh","combien","gendarme
 
 export const PATH = {
     ASSET_SOUND:"../assets/sounds/",
-    ASSET_IMG:"../assets/images/"
+    ASSET_IMG:"../../assets/images/"
 }

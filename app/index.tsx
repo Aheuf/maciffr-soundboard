@@ -1,6 +1,5 @@
 import { ScrollView, View } from "react-native";
 import { SoundButton } from "@/components/SoundButton";
-import { ThemeEnum } from "@/constants/Enums";
 import { sounds } from "@/constants/constants";
 
 export default function Index() {
@@ -13,8 +12,7 @@ export default function Index() {
         "justifyContent":"center",
         "padding":"auto"
       }}>
-        {sounds.map((sound, index) => <SoundButton  theme={ThemeEnum.DARK}
-                                                    titre={sound}
+        {sounds.map((sound, index) => <SoundButton  titre={sound}
                                                     key={`${sound}-${index}`}/>)}
       </View>
     </ScrollView>
