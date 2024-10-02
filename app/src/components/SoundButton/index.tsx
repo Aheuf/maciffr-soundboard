@@ -1,26 +1,26 @@
-import { Format } from "@/constants/Enums"
-import { PATH } from "@/constants/constants"
+import { Format } from "@/constants/Enums";
 import { Image } from 'expo-image';
 import { TouchableOpacity, StyleSheet } from "react-native";
 import { Audio } from 'expo-av';
 
 type soundButtonProps = {
+    audio:any
+    image:any
     titre:string
 }
 
 const SIZE = 60
 
-export const SoundButton = ({titre }:soundButtonProps) => {
+export const SoundButton = ({ audio, image, titre }:soundButtonProps) => {
 
     async function handleClick() {
-        const { sound } = await Audio.Sound.createAsync(require(`${PATH.ASSET_SOUND}${titre}${Format.MP3}`));
+        const { sound } = await Audio.Sound.createAsync(audio);
         await sound.playAsync();
-        sound.unloadAsync();
     }
 
     return (
         <TouchableOpacity onPress={handleClick} style={style.button}>
-            <Image source={`${PATH.ASSET_IMG}${titre}${Format.PNG}`} alt={titre} style={style.img}/>
+            <Image source={image} alt={titre} style={style.img}/>
         </TouchableOpacity>
 )};
 

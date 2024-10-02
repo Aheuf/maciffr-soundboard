@@ -1,5 +1,5 @@
 import { View } from "react-native";
-import { sounds } from "@/constants/constants";
+import { audios, images, sounds } from "@/constants/constants";
 import { SoundButton } from "../components/SoundButton";
 
 export function Home () {
@@ -11,8 +11,10 @@ export function Home () {
         "justifyContent":"center",
         "padding":"auto"
     }}>
-        {sounds.map((sound, index) => <SoundButton  titre={sound}
-                                                    key={`${sound}-${index}`}/>)}
+        {sounds.map((titre, index) => <SoundButton  audio={audios[index]}
+                                                    titre={titre}
+                                                    image={images[index]}
+                                                    key={`${titre}-${index}`}/>)}
     </View>
   );
 }
