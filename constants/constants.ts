@@ -8,7 +8,15 @@ export const sounds: string[] = [
     "menfin",
     "ouaisouaisouais",
     "plante",
-    "yeet"
+    "yeet",
+    "tingle",
+    "onenagros",
+    "whee",
+    "tikawahukwa",
+    "ntm",
+    "minecraftVillager",
+    "bloque",
+    "kakoukakou"
 ]
 
 export const audios = [
@@ -21,7 +29,15 @@ export const audios = [
     require("../assets/audios/menfin.mp3"),
     require("../assets/audios/ouaisouaisouais.mp3"),
     require("../assets/audios/plante.mp3"),
-    require("../assets/audios/yeet.mp3")
+    require("../assets/audios/yeet.mp3"),
+    require("../assets/audios/tingle.mp3"),
+    require("../assets/audios/onenagros.mp3"),
+    require("../assets/audios/whee.mp3"),
+    require("../assets/audios/tikawahukwa.mp3"),
+    require("../assets/audios/ntm.mp3"),
+    require("../assets/audios/minecraftVillager.mp3"),
+    require("../assets/audios/bloque.mp3"),
+    require("../assets/audios/kakoukakou.mp3")
 ];
 
 export const images = [
@@ -34,5 +50,13 @@ export const images = [
     require("../assets/images/menfin.png"),
     require("../assets/images/ouaisouaisouais.png"),
     require("../assets/images/plante.png"),
-    require("../assets/images/yeet.png")
+    require("../assets/images/yeet.png"),
+    require("../assets/images/tingle.png"),
+    require("../assets/images/onenagros.png"),
+    require("../assets/images/whee.png"),
+    require("../assets/images/tikawahukwa.png"),
+    require("../assets/images/ntm.png"),
+    require("../assets/images/minecraftVillager.png"),
+    require("../assets/images/bloque.png"),
+    require("../assets/images/kakoukakou.png")
 ];
