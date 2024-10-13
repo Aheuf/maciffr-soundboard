@@ -16,7 +16,14 @@ export const sounds: string[] = [
     "ntm",
     "minecraftVillager",
     "bloque",
-    "kakoukakou"
+    "kakoukakou",
+    "alarm",
+    "caveau",
+    "cependant",
+    "codeAvecLeCul",
+    "normalEnRussie",
+    "ohNoMonkey",
+    "toujoursRaison"
 ]
 
 export const audios = [
@@ -37,7 +44,14 @@ export const audios = [
     require("../assets/audios/ntm.mp3"),
     require("../assets/audios/minecraftVillager.mp3"),
     require("../assets/audios/bloque.mp3"),
-    require("../assets/audios/kakoukakou.mp3")
+    require("../assets/audios/kakoukakou.mp3"),
+    require("../assets/audios/alarm.mp3"),
+    require("../assets/audios/caveau.mp3"),
+    require("../assets/audios/cependant.mp3"),
+    require("../assets/audios/codeAvecLeCul.mp3"),
+    require("../assets/audios/normalEnRussie.mp3"),
+    require("../assets/audios/ohNoMonkey.mp3"),
+    require("../assets/audios/toujoursRaison.mp3"),
 ];
 
 export const images = [
@@ -58,5 +72,12 @@ export const images = [
     require("../assets/images/ntm.png"),
     require("../assets/images/minecraftVillager.png"),
     require("../assets/images/bloque.png"),
-    require("../assets/images/kakoukakou.png")
+    require("../assets/images/kakoukakou.png"),
+    require("../assets/images/alarm.png"),
+    require("../assets/images/caveau.png"),
+    require("../assets/images/cependant.png"),
+    require("../assets/images/codeAvecLeCul.png"),
+    require("../assets/images/normalEnRussie.png"),
+    require("../assets/images/ohNoMonkey.png"),
+    require("../assets/images/toujoursRaison.png"),
 ];
