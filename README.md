@@ -1,4 +1,22 @@
-# Welcome to your Expo app 👋
+# DOC APP
+
+**app de soundboard partagée.**
+
+Pour avoir votre version :
+- demander l'ajout en tant que contributeur au projet
+- creer une branche propre à l'équipe
+- mettre les miniatures des sons dans `assets/images` et les sons dans `assets/audios`
+- renseigner les constantes du fichier `constants.ts` comme suivant :
+  - le tableau `sounds` porte les titres des boutons
+  - le tableau `audios` porte l'import de l'audio sous format `require("../assets/audios/{{TITRE}}.mp3")` **ATTENTION** le titre est renseigné en dur. *merci react native*
+  - le tableau `images` porte l'import des miniatures sous le format `require("../assets/audios/{{TITRE}}.png")` **ATTENTION** le titre est renseigné en dur. *merci react native*
+- build votre APK *(necessite un compte expo et un `> eas login` dans la console)* avec la commande `eas build --profile preview --platform android`
+
+c'est une V0.1.0 donc pas encore compatible IOS je ne sais pas si juste changer la commande de build suffit...
+
+# VVV - DOC EXPO - VVV
+
+## Welcome to your Expo app 👋
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
